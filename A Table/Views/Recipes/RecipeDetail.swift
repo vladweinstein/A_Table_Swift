@@ -18,7 +18,6 @@ struct RecipeDetail: View {
     var body: some View {
         ScrollView {
             RectangleImage(image: recipe.image)
-                .ignoresSafeArea(edges: .top)
                 .frame(height: 410)
                 .offset(y: -100)
                 .padding(.bottom, -160)
@@ -42,29 +41,27 @@ struct RecipeDetail: View {
                 .foregroundColor(.secondary)
                 .padding(.horizontal, 20)
                 
-                Divider()
                 
-                VStack {Text("Ingredients (scroll to view all)")
-                    .font(.subheadline)
+                List {
+                    Text("Ingredients (scroll to view all)")
+                        .font(.subheadline)
+                    Text(recipe.ingredients)
                     
-                    List {
-                        Text(recipe.ingredients)
-                            
-                            .padding(.horizontal, 30)
-                    }
-                    .frame(height: 105)
-                    
-                    Divider()
-                    
-                    VStack {
-                        Text("Directions")
-                            .font(.subheadline)
-                            .padding(.bottom, 5)
-                        Text(recipe.description)
-                    }
-                    
-                    .padding(.horizontal, 30)
                 }
+                
+                .frame(height: 150)
+                
+                
+                VStack {
+                    Text("Directions")
+                        .font(.subheadline)
+                        .padding(.bottom, 5)
+                        .padding(.top, 10)
+                    Text(recipe.description)
+                }
+                
+                .padding(.horizontal, 30)
+                
             }
             .padding()
             

@@ -15,13 +15,14 @@ struct CategoryItem: View {
             recipe.image
                 .renderingMode(.original)
                 .resizable()
-                .frame(width: 200, height: 155)
+                .frame(width: 200, height: 150)
                 .cornerRadius(5)
             Text(recipe.name)
                 .foregroundColor(.primary)
-                .font(.caption)
+                .font(.body)
         }
         .padding(.leading, 15)
+        .padding(.bottom, 10)
     }
 }
 

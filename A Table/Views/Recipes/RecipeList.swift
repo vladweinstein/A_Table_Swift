@@ -33,12 +33,13 @@ struct RecipeList: View {
                 }
             }
             .navigationTitle("Recipes")
-           
+           Spacer()
         }
     }
 }
 
 struct RecipeList_Previews: PreviewProvider {
+    
     static var previews: some View {
         RecipeList()
             .environmentObject(ModelData())

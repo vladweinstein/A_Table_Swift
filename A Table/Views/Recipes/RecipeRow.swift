@@ -16,7 +16,7 @@ struct RecipeRow: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(height: 60)
-                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                .cornerRadius(5)
                 
             Text(recipe.name)
             

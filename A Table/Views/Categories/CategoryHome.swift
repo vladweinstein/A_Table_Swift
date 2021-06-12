@@ -12,17 +12,17 @@ struct CategoryHome: View {
     @EnvironmentObject var modelData: ModelData
     
     var body: some View {
-        
         NavigationView {
             List {
                 PageView(pages: modelData.features.map { FeatureCard(recipe: $0) })
                     .aspectRatio(3 / 2, contentMode: .fit)
                     .listRowInsets(EdgeInsets())
-                
-                ForEach(modelData.categories.keys.shuffled(), id: \.self) { key in
+
+                ForEach(modelData.categories.keys.sorted(), id: \.self) { key in
                     CategoryRow(categoryName: key, items: modelData.categories[key]!)
                 }
                 .listRowInsets(EdgeInsets())
+                .listRowBackground(Color.clear)
             }
             
             .navigationTitle("À Table")
