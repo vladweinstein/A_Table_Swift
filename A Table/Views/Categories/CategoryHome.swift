@@ -13,16 +13,14 @@ struct CategoryHome: View {
     
     var body: some View {
         NavigationView {
-            List {
+            ScrollView {
                 PageView(pages: modelData.features.map { FeatureCard(recipe: $0) })
                     .aspectRatio(3 / 2, contentMode: .fit)
-                    .listRowInsets(EdgeInsets())
-
                 ForEach(modelData.categories.keys.sorted(), id: \.self) { key in
                     CategoryRow(categoryName: key, items: modelData.categories[key]!)
+                    Divider()
                 }
-                .listRowInsets(EdgeInsets())
-                .listRowBackground(Color.clear)
+               
             }
             
             .navigationTitle("À Table")

@@ -3,7 +3,7 @@
         "name": "Roast Chicken",
         "category": "Main Course",
         "meat": "Poultry",
-        "cookTime": "90 minutes at 400°F",
+        "cookTime": "90 minutes",
         "id": 1001,
         "isFeatured": true,
         "isFavorite": true,
@@ -90,5 +90,18 @@
         "description": "Make the caramel\n\nMaybe you should make the flan first.\n\nActually just test it out and I'll be here when you're done.\n\nEnjoy!",
         "imageName": "flanfull"
     },
+    {
+        "name": "Fraises au vin rouge",
+        "category": "Dessert",
+        "meat": "Vegetarian",
+        "cookTime": "10 minutes",
+        "id": 1008,
+        "isFeatured": false,
+        "isFavorite": false,
+        "country": "France",
+        "ingredients": "When you find out\n\nLet me know\n\nAnd write it in here\n\nThanks",
+        "description": "Find the strawberries\n\nMaybe you should make this first.\n\nActually just test it out and I'll be here when you're done.\n\nEnjoy!",
+        "imageName": "strawberriesfull"
+    }
     
 ]

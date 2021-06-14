@@ -16,6 +16,9 @@ struct FeatureCard: View {
             .resizable()
             .aspectRatio(3 / 2, contentMode: .fit)
             .overlay(TextOverlay(recipe: recipe))
+            .cornerRadius(5)
+            .padding(.horizontal)
+            
     }
 }
 

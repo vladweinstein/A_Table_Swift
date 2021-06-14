@@ -19,7 +19,10 @@ struct CategoryItem: View {
                 .cornerRadius(5)
             Text(recipe.name)
                 .foregroundColor(.primary)
-                .font(.body)
+            Text(recipe.cookTime)
+                .foregroundColor(.secondary)
+            
+            
         }
         .padding(.leading, 15)
         .padding(.bottom, 10)

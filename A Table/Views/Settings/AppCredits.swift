@@ -9,31 +9,34 @@ import SwiftUI
 
 struct AppCredits: View {
     var body: some View {
-        ScrollView{
-            VStack {
+        List{
+           
+                Section(header: Text("Developer & Photographer")) {
                 HStack {
-                    Text("Developed by Vladimir Weinstein. He loves photography, video games and cooking.")
+                    Text("Developed in SwiftUI by Vladimir Weinstein. www.vladw.com")
                     Image("VladimirWeinstein")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(height: 150)
                         .cornerRadius(5)
-                    
+                        .frame(height: 150)
+                        
                 }
-                .padding(.bottom, 20)
-                
+                }
+              
+                Section(header: Text("chef & French Teacher")) {
                 HStack {
                     
                     Image("DanieleWeinstein")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(height: 150)
                         .cornerRadius(5)
-                    Text("Recipes authored by Daniele Weinstein. She loves experimenting with food and teaches French.")
+                        .frame(height: 150)
+                        
+                    Text("Recipes authored and tested by Daniele Weinstein.")
                 }
-                Spacer()
+                
             }
-            .padding()
+            
         }
     }
 }
