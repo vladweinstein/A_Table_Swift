@@ -9,6 +9,7 @@ import Foundation
 import Combine
 
 final class ModelData: ObservableObject {
+    
     @Published var recipes: [Recipe] = load("recipeData.json")
     
     var features: [Recipe] {

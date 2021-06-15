@@ -27,7 +27,7 @@
     },
     {
         "name": "Spiced Chickpea Salad",
-        "category": "Appetizer",
+        "category": "Appetizers",
         "meat": "Vegetarian",
         "cookTime": "20 minutes",
         "id": 1003,
@@ -53,7 +53,7 @@
     },
     {
         "name": "Oeufs Mimosa (Deviled Eggs)",
-        "category": "Appetizer",
+        "category": "Appetizers",
         "meat": "Vegetarian",
         "cookTime": "5 minutes",
         "id": 1005,
@@ -66,7 +66,7 @@
     },
     {
         "name": "Apple Compote",
-        "category": "Dessert",
+        "category": "Sweets & Desserts",
         "meat": "Vegetarian",
         "cookTime": "1 hour",
         "id": 1006,
@@ -79,7 +79,7 @@
     },
     {
         "name": "Caramel Flan",
-        "category": "Dessert",
+        "category": "Sweets & Desserts",
         "meat": "Vegetarian",
         "cookTime": "1 hour",
         "id": 1007,
@@ -92,7 +92,7 @@
     },
     {
         "name": "Fraises au vin rouge",
-        "category": "Dessert",
+        "category": "Sweets & Desserts",
         "meat": "Vegetarian",
         "cookTime": "10 minutes",
         "id": 1008,

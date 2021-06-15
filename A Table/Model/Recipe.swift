@@ -20,9 +20,9 @@ struct Recipe: Hashable, Codable, Identifiable {
     
     var category: Category
         enum Category: String, CaseIterable, Codable {
-            case appetizer = "Appetizer"
+            case appetizer = "Appetizers"
             case maincourse = "Main Course"
-            case dessert = "Dessert"
+            case dessert = "Sweets & Desserts"
         }
     
     private var imageName: String
