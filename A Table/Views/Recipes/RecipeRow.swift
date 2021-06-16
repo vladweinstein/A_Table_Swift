@@ -11,6 +11,7 @@ struct RecipeRow: View {
     var recipe: Recipe
     
     var body: some View {
+        NavigationLink(destination: RecipeDetail(recipe: recipe)) {
         HStack {
             recipe.image
                 .resizable()
@@ -28,6 +29,7 @@ struct RecipeRow: View {
             }
         }
     }
+}
 }
 
 struct RecipeRow_Previews: PreviewProvider {

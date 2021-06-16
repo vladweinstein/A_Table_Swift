@@ -27,13 +27,28 @@ struct RecipeList: View {
                 }
                 .padding(10)
                 ForEach(filteredRecipes) { recipe in
-                    NavigationLink(destination: RecipeDetail(recipe: recipe)) {
-                        RecipeRow(recipe: recipe)
-                    }
+                    RecipeRow(recipe: recipe)
+                        .swipeActions(edge: .trailing) {
+                            Button { if recipe.isFavorite {print("unfavorite")
+                                
+                            } else {print("favorite")
+                                
+                            }
+                            }
+                        label: {
+                            if recipe.isFavorite {
+                                Label("Unfavorite", systemImage: "star.slash.fill")
+                            } else {
+                                Label("Favorite", systemImage: "star.fill")
+                            }
+                        }
+                        .tint(.yellow)
+                        }
                 }
+                
             }
             .navigationTitle("Recipes")
-           Spacer()
+            Spacer()
         }
     }
 }

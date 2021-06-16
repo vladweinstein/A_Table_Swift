@@ -52,7 +52,7 @@
         "imageName": "buttershrimpfull"
     },
     {
-        "name": "Oeufs Mimosa (Deviled Eggs)",
+        "name": "Oeufs Mimosa",
         "category": "Appetizers",
         "meat": "Vegetarian",
         "cookTime": "5 minutes",
@@ -61,7 +61,7 @@
         "isFavorite": false,
         "country": "Global",
         "ingredients": "12 Eggs\n\n1/2 cup Mayonnaise\n\n1/2 cup Fresh Parsley chopped fine\n\n1/2 cup of black pitted Mediterranean olives\n\n6 anchovies (optional)\n\nHerbed salt",
-        "description": "Prep 6 cups of water to boil in a large pot.\n\nWhen the water reaches a rolling boil, drop in the eggs delicately.\n\nAfter 10 minutes, strain the water from the pan and run cold water over the eggs to cool them quickly.\n\nPeel them: it is easier to peel the eggs under running water.\n\nCut the hard boiled eggs in half lengthwise. Carefully remove the yolks with a spoon and divide the yolks into two batches in separate bowls.\n\nBatch 1: Mash the egg yolks, add some herbed salt, then add just enough mayonnaise to make a smooth spread  and fill the egg whites with this spread.\n\nBatch 2: Using a Rotary Cheese Grater or a grater with small holes, grate the yolks in a bowl.\n\nAdd parsley and sea salt to that batch and mix delicately with a fork.\n\nSprinkle the fluffy egg yolk generously over the filled eggs.\n\nDecorate with half pitted olive and half anchovy.",
+        "description": "This may also be known as deviled eggs. Prep 6 cups of water to boil in a large pot.\n\nWhen the water reaches a rolling boil, drop in the eggs delicately.\n\nAfter 10 minutes, strain the water from the pan and run cold water over the eggs to cool them quickly.\n\nPeel them: it is easier to peel the eggs under running water.\n\nCut the hard boiled eggs in half lengthwise. Carefully remove the yolks with a spoon and divide the yolks into two batches in separate bowls.\n\nBatch 1: Mash the egg yolks, add some herbed salt, then add just enough mayonnaise to make a smooth spread  and fill the egg whites with this spread.\n\nBatch 2: Using a Rotary Cheese Grater or a grater with small holes, grate the yolks in a bowl.\n\nAdd parsley and sea salt to that batch and mix delicately with a fork.\n\nSprinkle the fluffy egg yolk generously over the filled eggs.\n\nDecorate with half pitted olive and half anchovy.",
         "imageName": "eggmimosafull"
     },
     {
@@ -102,6 +102,19 @@
         "ingredients": "When you find out\n\nLet me know\n\nAnd write it in here\n\nThanks",
         "description": "Find the strawberries\n\nMaybe you should make this first.\n\nActually just test it out and I'll be here when you're done.\n\nEnjoy!",
         "imageName": "strawberriesfull"
+    },
+    {
+        "name": "Roasted Bell Peppers",
+        "category": "Appetizers",
+        "meat": "Vegetarian",
+        "cookTime": "1 hour",
+        "id": 1009,
+        "isFeatured": true,
+        "isFavorite": false,
+        "country": "France",
+        "ingredients": "4 red bell peppers\n\n2  oz tomato paste (approximately 1/3 of a small can)\n\n4 garlic cloves crushed\n\n5 tablespoons olive oil\n\n20 black Moroccan Oil Cured Olives pitted\n\nSalt, Cayenne pepper to taste\n\n1 tablespoon of honey",
+        "description": "Preheat oven at 425°F\n\nPlace the Red Bell peppers on a tin foil in a plate in the oven\n\nLet roast for 20 minutes.\n\nTurn the peppers and put back in the oven for another 20 minutes until their skin burns a little.\n\nTake the peppers out of the oven and let them cool down.\n\nWhen cool to the touch, peel them delicately, rinse off any seeds.\n\nCut them into 1 to 1-1/2 inch strips and set in a colander during at least one hour. Discard juices that strain out.\n\n In a separate bowl, mix the tomato paste with the crushed garlic, 2 tablespoons of water and half of the olive oil.\n\nWhen the peppers are drained, put the tomato mix in a hot pan and cook briefly until the garlic is fragrant (5 minutes)\n\nAdd the peppers, the olives and the rest of the olive oil, bring to a very brief boil.\n\nLower the flame and let simmer 20 to 25 minutes.\n\nAdd salt, Cayenne pepper and honey.\n\nLet cool down and serve cold or room temp. Great as a side dish too!",
+        "imageName": "redpeppersfull"
     }
     
 ]
