@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-final class ModelData: ObservableObject {
+class ModelData: ObservableObject {
     
     @Published var recipes: [Recipe] = load("recipeData.json")
     
@@ -27,7 +27,7 @@ final class ModelData: ObservableObject {
 
 
 func load<T: Decodable>(_ filename: String) -> T {
-    let data: Data
+    var data: Data
     
     guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
     else {
