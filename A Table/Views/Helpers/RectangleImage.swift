@@ -12,7 +12,7 @@ struct RectangleImage: View {
 
     var body: some View {
         image
-            .clipShape(Rectangle())
+            
             
     }
 }

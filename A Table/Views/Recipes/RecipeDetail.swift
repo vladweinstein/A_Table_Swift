@@ -10,10 +10,13 @@ import MessageUI
 
 
 struct RecipeDetail: View {
+    @Environment(\.colorScheme) var colorScheme
+    
     
     @EnvironmentObject var modelData: ModelData
     @State private var result: Result<MFMailComposeResult, Error>? = nil
     @State private var isShowingMailView = false
+    @State private var imageHeight: CGFloat = 200
     
     var recipe: Recipe
     
@@ -23,109 +26,148 @@ struct RecipeDetail: View {
     
     
     var body: some View {
-        ScrollView {
-            RectangleImage(image: recipe.image)
-                .scaledToFill()
-                .clipped()
-                .frame(height: 280)
-                .padding(.bottom, -80)
-            
-            
-            VStack(alignment: .leading) {
-                HStack {
-                    Text(recipe.name)
-                        .bold()
-                        .font(.title)
-                        .foregroundColor(.primary)
-                        .padding([.top, .leading], 20.0)
-                    FavoriteButton(isSet: $modelData.recipes[recipeIndex].isFavorite)
-                        .padding(.top, 20.0)
-                }
-                
-                HStack {
-                    Text(recipe.meat)
-                    Spacer()
-                    Text(recipe.cookTime)
-                    
-                }
-                .font(.title3)
-                .foregroundColor(.secondary)
-                .padding(.horizontal, 20)
-                
-                
-                List {
-                    Text("Ingredients (scroll to view all)")
-                        .font(.subheadline)
-                    Text(recipe.ingredients)
-                    
-                }
-                
-                .frame(height: 160)
-                
-                
-                VStack {
-                    Text("Directions")
-                        .font(.subheadline)
-                        .padding(.bottom, 5)
-                        .padding(.top, 10)
-                    Text(recipe.description)
-                }
-                
-                .padding(.horizontal, 30)
-                
-                Group {
-                    
-                    HStack {
-                        let buttonHeight: CGFloat = 45
-
-                        Spacer().frame(width: 20)
+        GeometryReader { outerReader in
+            ScrollView {
+                VStack{
+                    GeometryReader { reader in
+                        let offsetY = getOffsetY(outerReader: outerReader, reader: reader)
+                        let height = getHeight(outerReader: outerReader, reader: reader, imageHeight: reader.size.height)
                         
-                        FavoriteButton(isSet: $modelData.recipes[recipeIndex].isFavorite)
-                            .padding(.horizontal, 10)
-                            .padding(.vertical, 10)
-                        
-                        Spacer()
-                        
-                        Button(action: {
-                            if MFMailComposeViewController.canSendMail() {
-                                self.isShowingMailView.toggle()
-                            } else {
-                                print("Can't send emails from this device")
-                            }
-                            if result != nil {
-                                print("Result: \(String(describing: result))")
-                            }
-                        }) {
-                            Text("Share Feedback")
+                        HStack {
+                            RectangleImage(image: recipe.image)
+                                .image.resizable()
+                                .scaledToFill()
+                                .frame(height: height)
+                                .clipped()
+                                .offset(x: 0, y: offsetY)
+                        }
+                        .frame(width: reader.size.width)
+                    }
+                    .frame(height: 280)
+                    
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Text(recipe.name)
                                 .bold()
-                                .foregroundColor(.white)
-                                .frame(height: buttonHeight)
-                                .padding(.horizontal, 22)
-                                .background(Color.blue)
-                                .cornerRadius(10)
+                                .font(.title)
+                                .foregroundColor(.primary)
+                                .padding([.top, .leading], 20.0)
+                            FavoriteButton(isSet: $modelData.recipes[recipeIndex].isFavorite)
+                                .padding(.top, 20.0)
+                        }
+                        
+                        HStack {
+                            Text(recipe.meat)
+                            Spacer()
+                            Text(recipe.cookTime)
+                            
+                        }
+                        .font(.title3)
+                        .foregroundColor(.secondary)
+                        .padding(.horizontal, 20)
+                        .padding(.bottom, 30)
+                        
+                        
+                        List {
+                            Text("Ingredients (scroll to view all)")
+                                .font(.subheadline)
+                            Text(recipe.ingredients)
+                            
+                        }
+                        .padding(-20)
+                        .frame(height: 180)
+                        
+                        
+                        VStack {
+                            Text("Directions")
+                                .font(.subheadline)
+                                .padding(.bottom, 5)
+                                .padding(.top, 10)
+                            Text(recipe.description)
+                        }
+                        
+                        .padding(.horizontal, 30)
+                        
+                        Group {
+                            
+                            HStack {
+                                let buttonHeight: CGFloat = 45
+                                
+                                Spacer().frame(width: 20)
+                                
+                                FavoriteButton(isSet: $modelData.recipes[recipeIndex].isFavorite)
+                                    .padding(.horizontal, 10)
+                                    .padding(.vertical, 10)
+                                
+                                Spacer()
+                                
+                                Button(action: {
+                                    if MFMailComposeViewController.canSendMail() {
+                                        self.isShowingMailView.toggle()
+                                    } else {
+                                        print("Can't send emails from this device")
+                                    }
+                                    if result != nil {
+                                        print("Result: \(String(describing: result))")
+                                    }
+                                }) {
+                                    Text("Share Feedback")
+                                        .bold()
+                                        .foregroundColor(.white)
+                                        .frame(height: buttonHeight)
+                                        .padding(.horizontal, 22)
+                                        .background(Color.blue)
+                                        .cornerRadius(10)
+                                }
+                            }
+                            .padding(.horizontal, 55)
+                            
+                            Spacer().frame(height: 10)
+                        }
+                        
+                    }
+                    
+                    
+                    .sheet(isPresented: $isShowingMailView) {
+                        MailView(result: $result) { composer in
+                            composer.setSubject("Recipe Suggestion")
+                            composer.setToRecipients(["vlad@vladw.com"])
                         }
                     }
-                    .padding(.horizontal, 55)
-                    
-                    Spacer().frame(height: 10)
-                }
-                
-                    }
-            
-            
-            .sheet(isPresented: $isShowingMailView) {
-                MailView(result: $result) { composer in
-                    composer.setSubject("Recipe Suggestion")
-                    composer.setToRecipients(["vlad@vladw.com"])
+                    .padding(.vertical)
+                    .padding(.horizontal, 20)
+                    .frame(maxWidth: .infinity)
+                    .background(colorScheme == .dark ? Color.black : Color.white)
+                    .cornerRadius(25)
+                    .offset(y: -30)
                 }
             }
-            .background(Color.white)
-            .cornerRadius(25)
-            .padding()
-            .navigationTitle(recipe.name)
-            .navigationBarTitleDisplayMode(.inline)
         }
+        .ignoresSafeArea(edges: .top)
     }
+    func getOffsetY(outerReader: GeometryProxy, reader: GeometryProxy) -> CGFloat {
+        let outerY = outerReader.frame(in: .global).minY
+        let innerY = reader.frame(in: .global).minY
+        
+        let offsetY = outerY - innerY
+        
+        if offsetY > 0 { return 0 }
+        
+        return offsetY
+    }
+    
+    func getHeight(outerReader: GeometryProxy, reader: GeometryProxy, imageHeight: CGFloat) -> CGFloat {
+        let outerY = outerReader.frame(in: .global).minY
+        let innerY = reader.frame(in: .global).minY
+        
+        let offsetY = outerY - innerY
+        
+        if offsetY > 0 { return imageHeight }
+        
+        let height = reader.size.height + abs(offsetY)
+        return height
+    }
+    
 }
 
 struct RecipeDetail_Previews: PreviewProvider {
