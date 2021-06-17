@@ -12,6 +12,13 @@ class ModelData: ObservableObject {
     
     @Published var recipes: [Recipe] = load("recipeData.json")
     
+    func toggleFavorite(recipe: Recipe){
+        if let index = recipes.firstIndex(where: { $0.id == recipe.id}) {
+            recipes[index].isFavorite.toggle()
+        }
+    }
+
+    
     var features: [Recipe] {
         recipes.filter { $0.isFeatured }
     }
@@ -23,6 +30,7 @@ class ModelData: ObservableObject {
         )
     }
 }
+
 
 
 

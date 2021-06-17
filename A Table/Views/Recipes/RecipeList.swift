@@ -9,7 +9,15 @@ import SwiftUI
 
 struct RecipeList: View {
     @EnvironmentObject var modelData: ModelData
+    
     @State private var showFavoritesOnly = false
+    
+    @State private var query = ""
+    
+    var searchNames: [Recipe] {
+        if query == "" { return modelData.recipes }
+        return modelData.recipes.filter { $0.name.lowercased().contains(query.lowercased()) }
+    }
     
     var filteredRecipes: [Recipe] {
         modelData.recipes.filter { recipe in
@@ -29,11 +37,7 @@ struct RecipeList: View {
                 ForEach(filteredRecipes) { recipe in
                     RecipeRow(recipe: recipe)
                         .swipeActions(edge: .trailing) {
-                            Button { if recipe.isFavorite {print("unfavorite")
-                                
-                            } else {print("favorite")
-                                
-                            }
+                            Button { modelData.toggleFavorite(recipe: recipe)
                             }
                         label: {
                             if recipe.isFavorite {
@@ -47,6 +51,7 @@ struct RecipeList: View {
                 }
                 
             }
+            .searchable(text: $query)
             .navigationTitle("Recipes")
             Spacer()
         }
