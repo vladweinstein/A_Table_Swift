@@ -6,29 +6,40 @@
 //
 
 import SwiftUI
+import MessageUI
+
 
 struct RecipeDetail: View {
+    
     @EnvironmentObject var modelData: ModelData
+    @State private var result: Result<MFMailComposeResult, Error>? = nil
+    @State private var isShowingMailView = false
+    
     var recipe: Recipe
     
     var recipeIndex: Int {
         modelData.recipes.firstIndex(where: { $0.id == recipe.id })!
     }
     
+    
     var body: some View {
         ScrollView {
             RectangleImage(image: recipe.image)
-                .frame(height: 410)
-                .offset(y: -100)
-                .padding(.bottom, -160)
+                .scaledToFill()
+                .clipped()
+                .frame(height: 280)
+                .padding(.bottom, -80)
+            
             
             VStack(alignment: .leading) {
                 HStack {
                     Text(recipe.name)
+                        .bold()
                         .font(.title)
                         .foregroundColor(.primary)
-                        .padding(.leading, 20.0)
+                        .padding([.top, .leading], 20.0)
                     FavoriteButton(isSet: $modelData.recipes[recipeIndex].isFavorite)
+                        .padding(.top, 20.0)
                 }
                 
                 HStack {
@@ -37,7 +48,7 @@ struct RecipeDetail: View {
                     Text(recipe.cookTime)
                     
                 }
-                .font(.subheadline)
+                .font(.title3)
                 .foregroundColor(.secondary)
                 .padding(.horizontal, 20)
                 
@@ -49,7 +60,7 @@ struct RecipeDetail: View {
                     
                 }
                 
-                .frame(height: 150)
+                .frame(height: 160)
                 
                 
                 VStack {
@@ -62,9 +73,57 @@ struct RecipeDetail: View {
                 
                 .padding(.horizontal, 30)
                 
-            }
-            .padding()
+                Group {
+                    
+                    HStack {
+                        let buttonHeight: CGFloat = 45
+
+                        Spacer().frame(width: 20)
+                        
+                        FavoriteButton(isSet: $modelData.recipes[recipeIndex].isFavorite)
+                            .padding(.horizontal, 10)
+                            .padding(.vertical, 10)
+                        
+                        Spacer()
+                        
+                        Button(action: {
+                            if MFMailComposeViewController.canSendMail() {
+                                self.isShowingMailView.toggle()
+                            } else {
+                                print("Can't send emails from this device")
+                            }
+                            if result != nil {
+                                print("Result: \(String(describing: result))")
+                            }
+                        }) {
+                            Text("Share Feedback")
+                                .bold()
+                                .foregroundColor(.white)
+                                .frame(height: buttonHeight)
+                                .padding(.horizontal, 22)
+                                .background(Color.blue)
+                                .cornerRadius(10)
+                        }
+                    }
+                    .padding(.horizontal, 55)
+                    
+                    Spacer().frame(height: 10)
+                }
+                
+                    }
             
+            
+            .sheet(isPresented: $isShowingMailView) {
+                MailView(result: $result) { composer in
+                    composer.setSubject("Recipe Suggestion")
+                    composer.setToRecipients(["vlad@vladw.com"])
+                }
+            }
+            .background(Color.white)
+            .cornerRadius(25)
+            .padding()
+            .navigationTitle(recipe.name)
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }

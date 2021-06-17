@@ -14,16 +14,21 @@ struct RecipeList: View {
     
     @State private var query = ""
     
-    var searchNames: [Recipe] {
-        if query == "" { return modelData.recipes }
-        return modelData.recipes.filter { $0.name.lowercased().contains(query.lowercased()) }
-    }
-    
     var filteredRecipes: [Recipe] {
         modelData.recipes.filter { recipe in
-            (!showFavoritesOnly || recipe.isFavorite)
+            if showFavoritesOnly {
+                if !recipe.isFavorite {
+                    return false
+                }
+            }
+            
+            if query == "" { return true }
+            else {
+                return recipe.name.lowercased().contains(query.lowercased())
+            }
         }
     }
+    
     
     var body: some View {
         NavigationView {
