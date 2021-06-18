@@ -83,15 +83,13 @@ struct RecipeDetail: View {
                         VStack {
                             HStack {
                                 
-                                VStack(alignment: .leading) {
+                                VStack() {
                                     Text("Ingredients")
                                         .font(.headline)
                                     Text("Tap to show/hide")
                                         .font(.caption)
                                         .foregroundColor(.secondary)
                                 }
-                                .padding(.horizontal, 20)
-                                
                                 
                                 Spacer()
                                 
@@ -104,18 +102,18 @@ struct RecipeDetail: View {
                                         .imageScale(.large)
                                         .rotationEffect(.degrees(showIngredients ? 90 : 0))
                                         .scaleEffect(showIngredients ? 1.2 : 1)
-                                        .padding()
                                 }
                             }
                             .padding(.horizontal, 30)
                             
                             if showIngredients {
                                 List {
-                                    Text("Ingredients (scroll to view all)")
-                                        .font(.subheadline)
                                     Text(recipe.ingredients)
-                                    
                                 }
+                                .background(Color.white)
+                                .cornerRadius(10)
+                                .frame(height: 300)
+                                .padding(.horizontal, 20)
                                 .transition(.moveAndFade)
                             }
                         }
@@ -123,22 +121,22 @@ struct RecipeDetail: View {
                         Divider()
                         VStack {
                             Text("Directions")
-                                .font(.title3)
-                                .foregroundColor(.secondary)
+                                .font(.headline)
                                 .padding(.bottom, 15)
                                 .padding(.top, 10)
                             Text(recipe.description)
                         }
-                        
                         .padding(.horizontal, 25)
-                        .padding(.bottom, 10)
+                        
+                        
+                        Divider()
                         
                         Group {
                             
                             HStack {
-                                let buttonHeight: CGFloat = 45
+                                let buttonHeight: CGFloat = 50
                                 
-                                Spacer().frame(width: 20)
+                                Spacer().frame(width: 30)
                                 
                                 FavoriteButton(isSet: $modelData.recipes[recipeIndex].isFavorite)
                                     .padding(.horizontal, 10)
@@ -168,10 +166,9 @@ struct RecipeDetail: View {
                             }
                             .padding(.horizontal, 12)
                             
-                            Spacer().frame(height: 10)
+                            Spacer().frame(height: 5)
                         }
                         .padding(.trailing, 30.0)
-                        .padding(.bottom, 15)
                     }
                     
                     
@@ -190,7 +187,7 @@ struct RecipeDetail: View {
                 }
             }
         }
-        .edgesIgnoringSafeArea(.all)
+        .edgesIgnoringSafeArea(.top)
     }
     func getOffsetY(outerReader: GeometryProxy, reader: GeometryProxy) -> CGFloat {
         let outerY = outerReader.frame(in: .global).minY

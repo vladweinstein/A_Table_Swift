@@ -12,13 +12,14 @@ struct FeatureCard: View {
 
     var body: some View {
         
+        NavigationLink(destination: RecipeDetail(recipe: recipe)) {
         recipe.featureImage?
             .resizable()
             .aspectRatio(3 / 2, contentMode: .fit)
             .overlay(TextOverlay(recipe: recipe))
             .cornerRadius(5)
             .padding(.horizontal)
-            
+        }
     }
 }
 
