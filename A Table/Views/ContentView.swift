@@ -8,36 +8,72 @@
 import SwiftUI
 
 struct ContentView: View {
-   
-    @State private var selection: Tab = .featured
     
-
-    enum Tab {
-        case featured
-        case list
-        case settings
-    }
-
+    @State private var tabSelection = 1
+    @State private var tappedTwice: Bool = false
+    
+    @State private var featured = UUID()
+    @State private var list = UUID()
+    @State private var settings = UUID()
+    
     var body: some View {
-        TabView(selection: $selection) {
+        var handler: Binding<Int> { Binding(
+            get: { self.tabSelection },
+            set: {
+            if $0 == self.tabSelection {
+                // Lands here if user tapped more than once
+                tappedTwice = true
+            }
+            self.tabSelection = $0
+        }
+        )}
+        
+        return TabView(selection: handler) {
+            
             CategoryHome()
+                .id(featured)
+                .onChange(of: tappedTwice, perform: { tappedTwice in
+                    guard tappedTwice else { return }
+                    featured = UUID()
+                    self.tappedTwice = false
+                })
+            
                 .tabItem {
-                    Label("Home", systemImage: "house")
-                       
+                    Image(systemName: "house")
+                    Text("Home")
                 }
-                .tag(Tab.featured)
-
+                .tag(1)
+       
+            
+            
             RecipeList()
+                .id(list)
+                .onChange(of: tappedTwice, perform: { tappedTwice in
+                    guard tappedTwice else { return }
+                    list = UUID()
+                    self.tappedTwice = false
+                })
+            
                 .tabItem {
-                    Label("Recipes", systemImage: "books.vertical")
+                    Image(systemName: "books.vertical")
+                    Text("Recipes")
                 }
-                .tag(Tab.list)
+                .tag(2)
+            
             
             SettingsPage()
+                .id(settings)
+                .onChange(of: tappedTwice, perform: { tappedTwice in
+                    guard tappedTwice else { return }
+                    settings = UUID()
+                    self.tappedTwice = false
+                })
+            
                 .tabItem {
-                    Label("Settings", systemImage: "gear")
+                    Image(systemName: "gear")
+                    Text("Settings")
                 }
-                .tag(Tab.settings)
+                .tag(3)
         }
     }
 }

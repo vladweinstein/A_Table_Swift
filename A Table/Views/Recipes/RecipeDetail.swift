@@ -8,6 +8,16 @@
 import SwiftUI
 import MessageUI
 
+extension AnyTransition {
+    static var moveAndFade: AnyTransition {
+        let insertion = AnyTransition.move(edge: .trailing)
+            .combined(with: .opacity)
+        let removal = AnyTransition.scale
+            .combined(with: .opacity)
+        return .asymmetric(insertion: insertion, removal: removal)
+    }
+}
+
 
 struct RecipeDetail: View {
     @Environment(\.colorScheme) var colorScheme
@@ -17,6 +27,7 @@ struct RecipeDetail: View {
     @State private var result: Result<MFMailComposeResult, Error>? = nil
     @State private var isShowingMailView = false
     @State private var imageHeight: CGFloat = 200
+    @State private var showIngredients = false
     
     var recipe: Recipe
     
@@ -43,7 +54,7 @@ struct RecipeDetail: View {
                         }
                         .frame(width: reader.size.width)
                     }
-                    .frame(height: 280)
+                    .frame(height: 320)
                     
                     VStack(alignment: .leading) {
                         HStack {
@@ -51,9 +62,9 @@ struct RecipeDetail: View {
                                 .bold()
                                 .font(.title)
                                 .foregroundColor(.primary)
-                                .padding([.top, .leading], 20.0)
+                                .padding(.leading, 20.0)
                             FavoriteButton(isSet: $modelData.recipes[recipeIndex].isFavorite)
-                                .padding(.top, 20.0)
+                            
                         }
                         
                         HStack {
@@ -65,25 +76,57 @@ struct RecipeDetail: View {
                         .font(.title3)
                         .foregroundColor(.secondary)
                         .padding(.horizontal, 20)
-                        .padding(.bottom, 30)
+                        .padding(.bottom, 20)
                         
+                        Divider()
                         
-                        List {
-                            Text("Ingredients (scroll to view all)")
-                                .font(.subheadline)
-                            Text(recipe.ingredients)
+                        VStack {
+                            HStack {
+                                
+                                VStack(alignment: .leading) {
+                                    Text("Ingredients")
+                                        .font(.headline)
+                                    Text("Tap to show/hide")
+                                        .font(.caption)
+                                        .foregroundColor(.secondary)
+                                }
+                                .padding(.horizontal, 20)
+                                
+                                
+                                Spacer()
+                                
+                                Button(action: {
+                                    withAnimation {
+                                        self.showIngredients.toggle()
+                                    }
+                                }) {
+                                    Image(systemName: "chevron.right.circle")
+                                        .imageScale(.large)
+                                        .rotationEffect(.degrees(showIngredients ? 90 : 0))
+                                        .scaleEffect(showIngredients ? 1.2 : 1)
+                                        .padding()
+                                }
+                            }
+                            .padding(.horizontal, 30)
                             
+                            if showIngredients {
+                                List {
+                                    Text("Ingredients (scroll to view all)")
+                                        .font(.subheadline)
+                                    Text(recipe.ingredients)
+                                    
+                                }
+                                .transition(.moveAndFade)
+                            }
                         }
-                        .padding(-20)
-                        .frame(height: 180)
                         
-                        
+                        Divider()
                         VStack {
                             Text("Directions")
                                 .font(.title3)
                                 .foregroundColor(.secondary)
                                 .padding(.bottom, 15)
-                                .padding(.top, 20)
+                                .padding(.top, 10)
                             Text(recipe.description)
                         }
                         
@@ -100,7 +143,7 @@ struct RecipeDetail: View {
                                 FavoriteButton(isSet: $modelData.recipes[recipeIndex].isFavorite)
                                     .padding(.horizontal, 10)
                                     .padding(.vertical, 10)
-                                    
+                                
                                 
                                 Spacer()
                                 
@@ -128,14 +171,14 @@ struct RecipeDetail: View {
                             Spacer().frame(height: 10)
                         }
                         .padding(.trailing, 30.0)
-                        
+                        .padding(.bottom, 15)
                     }
                     
                     
                     .sheet(isPresented: $isShowingMailView) {
                         MailView(result: $result) { composer in
-                            composer.setSubject("Recipe Suggestion")
-                            composer.setToRecipients(["vlad@vladw.com"])
+                            composer.setSubject("Recipe Feedback")
+                            composer.setToRecipients(["info@vladw.com"])
                         }
                     }
                     .padding(.vertical)
@@ -143,11 +186,11 @@ struct RecipeDetail: View {
                     .frame(maxWidth: .infinity)
                     .background(colorScheme == .dark ? Color.black : Color.white)
                     .cornerRadius(25)
-                    .offset(y: -30)
+                    .offset(y: -50)
                 }
             }
         }
-        .ignoresSafeArea(edges: .top)
+        .edgesIgnoringSafeArea(.all)
     }
     func getOffsetY(outerReader: GeometryProxy, reader: GeometryProxy) -> CGFloat {
         let outerY = outerReader.frame(in: .global).minY

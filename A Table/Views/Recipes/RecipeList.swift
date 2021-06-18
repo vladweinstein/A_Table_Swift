@@ -58,8 +58,8 @@ struct RecipeList: View {
             }
             .searchable(text: $query)
             .navigationTitle("Recipes")
-            Spacer()
         }
+        
     }
 }
 
