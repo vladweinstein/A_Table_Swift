@@ -47,8 +47,8 @@
         "isFeatured": false,
         "isFavorite": true,
         "country": "Italy",
-        "ingredients": "Shrimp ingredients placeholder",
-        "description": "Suscipit inceptos est felis purus aenean aliquet adipiscing diam venenatis, augue nibh duis neque aliquam tellus condimentum sagittis vivamus, cras ante etiam sit conubia elit tempus accumsan libero, mattis per erat habitasse cubilia ligula penatibus curae. Sagittis lorem augue arcu blandit libero molestie non ullamcorper, finibus imperdiet iaculis ad quam per luctus neque, ligula curae mauris parturient diam auctor eleifend laoreet ridiculus, hendrerit adipiscing sociosqu pretium nec velit aliquam. Inceptos egestas maecenas imperdiet eget id donec nisl curae congue, massa tortor vivamus ridiculus integer porta ultrices venenatis aliquet, curabitur et posuere blandit magnis dictum auctor lacinia, eleifend dolor in ornare vulputate ipsum morbi felis. Faucibus cursus malesuada orci ultrices diam nisl taciti torquent, tempor eros suspendisse euismod condimentum dis velit mi tristique, a quis etiam dignissim dictum porttitor lobortis ad fermentum, sapien consectetur dui dolor purus elit pharetra. Interdum mattis sapien ac orci vestibulum vulputate laoreet proin hac, maecenas mollis ridiculus morbi praesent cubilia vitae ligula vel, sem semper volutpat curae mauris justo nisl luctus, non eros primis ultrices nascetur erat varius integer.",
+        "ingredients": "1 serving: 5 to 8 medium sized shrimps\n\n1 tablespoon salted butter\n\n1 teaspoon vegetable oil\n\n2 tablespoons of flour\n\nsalt & pepper",
+        "description": "This can be made with fresh shrimp or frozen. Eitherway, make sure to lose the shells and devain the shrimps (unless you love them).\n\nRinse and pat dry, then place on a flat surface or plate. Sift flour onto shrimp, evenly distributing flour all around.\n\nHeat up a non-stick or cast iron to a medium to high heat, and drop in your butter with oil. Once the butter is frothing, gently drop in your shrimps.\n\nAfter 15 to 30 seconds, flip the shrimps and you should see pink already coming through. Once the flesh of the shrimp is less oqaque, turn off the heat and transfer shrimp to dish. The residual heat will keep cooking them, so don't wait until they are fully white, or you'll be eating rubber. On that note, bon appetit!",
         "imageName": "buttershrimpfull"
     },
     {
@@ -86,8 +86,8 @@
         "isFeatured": true,
         "isFavorite": false,
         "country": "France",
-        "ingredients": "When you find out\n\nLet me know\n\nAnd write it in here\n\nThanks",
-        "description": "Make the caramel\n\nMaybe you should make the flan first.\n\nActually just test it out and I'll be here when you're done.\n\nEnjoy!",
+        "ingredients": "1 liter milk\n\n6 whole eggs\n\n250g sugar \n\n1 vanilla pod\n\n200g sugar\n\n5cl water\n\n4 large ramequins\n\nDeep dish for bain-marie (water bath)",
+        "description": "Flan in French: Crème caramel renversée\n\n Preheat oven to 320 F\n\nCaramel : set sugar and water in a saucepan and let come to a little boil. Watch closely. When the sugar starts turning a honey color, turn off the heat.\n\n Slowly pour caramel evenly throughout ramequins and let cool to harden.\n\nIn a separate pot, bring the milk and vanilla to a near-boil, then turn off the heat. In a large mixing bowl, whisk the eggs, then add sugar to the mix, whisking consistently.\n\nStraining through a small chinois or colander, slowly pour the warm milk into the egg mixture, whisking quickly for about 2 minutes.\n\nPour the mix into the ramequins with hardened caramel.\n\nPlace the ramequins in a bain-marie in a deep tray or dish(‘bain-marie’ is a very warm bath of water). Place the tray in the 320F oven on a center or lower rack.\n\nThe water should never reach the point of boiling while in the oven.\n\nCook for about 45 min and test with a knife to see if cook is done. If and when the knife comes out clean, take the tray out of the oven.\n\nLet the flans cool down for 15 to 20 minutes, then store in the refrigerator for least 4 hours.\n\nBefore serving, place the ramequins in a dish with very warm water, let them sit for 5 minutes and turn them over, one by one, onto a shallow plate/dish with a swift and firm movement. The flipped flan should easily slip out of the ramequin onto the dish, with any melted caramel.",
         "imageName": "flanfull"
     },
     {
@@ -99,8 +99,8 @@
         "isFeatured": false,
         "isFavorite": false,
         "country": "France",
-        "ingredients": "When you find out\n\nLet me know\n\nAnd write it in here\n\nThanks",
-        "description": "Find the strawberries\n\nMaybe you should make this first.\n\nActually just test it out and I'll be here when you're done.\n\nEnjoy!",
+        "ingredients": "1 lb strawberries\n\n14 oz of red wine (Bordeaux or Cabernet)\n\n80g of brown sugar\n\n1 cinnamon stick\n\n1 star anise\n\n2 drops of vanilla extract\n\n1 clove\n\n1 cardamome pod",
+        "description": "In a sauce pan, bring to a boil the wine, the cinnamon stick and the sugar and lower the flame to simmer nicely 15 or 20 minutes, turn off the flame and let cool down.\n\nWash the strawberries and pat them dry delicately.\n\nCut the strawberries in two or three lengthwise, according to their size.\n\nPut the strawberries in a bowl. Filter the wine mixture and pour it over the strawberries.\n\nStore in the fridge for at least six hours prior to before serving.",
         "imageName": "strawberriesfull"
     },
     {

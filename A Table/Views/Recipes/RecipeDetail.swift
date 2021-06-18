@@ -80,13 +80,15 @@ struct RecipeDetail: View {
                         
                         VStack {
                             Text("Directions")
-                                .font(.subheadline)
-                                .padding(.bottom, 5)
-                                .padding(.top, 10)
+                                .font(.title3)
+                                .foregroundColor(.secondary)
+                                .padding(.bottom, 15)
+                                .padding(.top, 20)
                             Text(recipe.description)
                         }
                         
-                        .padding(.horizontal, 30)
+                        .padding(.horizontal, 25)
+                        .padding(.bottom, 10)
                         
                         Group {
                             
@@ -98,6 +100,7 @@ struct RecipeDetail: View {
                                 FavoriteButton(isSet: $modelData.recipes[recipeIndex].isFavorite)
                                     .padding(.horizontal, 10)
                                     .padding(.vertical, 10)
+                                    
                                 
                                 Spacer()
                                 
@@ -111,7 +114,7 @@ struct RecipeDetail: View {
                                         print("Result: \(String(describing: result))")
                                     }
                                 }) {
-                                    Text("Share Feedback")
+                                    Text("Send Recipe Feedback")
                                         .bold()
                                         .foregroundColor(.white)
                                         .frame(height: buttonHeight)
@@ -120,10 +123,11 @@ struct RecipeDetail: View {
                                         .cornerRadius(10)
                                 }
                             }
-                            .padding(.horizontal, 55)
+                            .padding(.horizontal, 12)
                             
                             Spacer().frame(height: 10)
                         }
+                        .padding(.trailing, 30.0)
                         
                     }
                     
