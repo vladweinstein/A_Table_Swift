@@ -51,7 +51,9 @@ struct RecipeDetail: View {
                                 .frame(height: height)
                                 .clipped()
                                 .offset(x: 0, y: offsetY)
+                                
                         }
+                        
                         .frame(width: reader.size.width)
                     }
                     .frame(height: 320)
@@ -107,14 +109,7 @@ struct RecipeDetail: View {
                             .padding(.horizontal, 30)
                             
                             if showIngredients {
-                                List {
-                                    Text(recipe.ingredients)
-                                }
-                                .background(Color.white)
-                                .cornerRadius(10)
-                                .frame(height: 300)
-                                .padding(.horizontal, 20)
-                                .transition(.moveAndFade)
+                                RecipeIngredientsList(recipe: recipe)
                             }
                         }
                         
