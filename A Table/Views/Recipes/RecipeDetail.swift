@@ -120,7 +120,9 @@ struct RecipeDetail: View {
                                 .padding(.bottom, 15)
                                 .padding(.top, 10)
                             Text(recipe.description)
+                                
                         }
+                    
                         .padding(.horizontal, 25)
                         
                         
@@ -182,6 +184,7 @@ struct RecipeDetail: View {
                 }
             }
         }
+        .navigationBarBackButtonHidden(true)
         .edgesIgnoringSafeArea(.top)
     }
     func getOffsetY(outerReader: GeometryProxy, reader: GeometryProxy) -> CGFloat {

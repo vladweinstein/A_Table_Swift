@@ -13,13 +13,14 @@ struct RecipeIngredientsList: View {
     
     var body: some View {
         List {
+            Section(header: Text("Scroll to view all ingredients")) {
             Text(recipe.ingredients)
-                .padding(.top, 10)
-        }
+                .padding([.leading, .top, .bottom], 10)
+            }}
         .cornerRadius(10)
         .frame(height: 300)
         .transition(.moveAndFade)
-    }
+        }
 }
 
 struct RecipeIngredientsList_Previews: PreviewProvider {
