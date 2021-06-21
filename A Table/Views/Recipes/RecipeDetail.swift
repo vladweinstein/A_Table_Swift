@@ -125,8 +125,13 @@ struct RecipeDetail: View {
                     
                         .padding(.horizontal, 25)
                         
+                        Spacer()
+                                .frame(height: 30)
                         
                         Divider()
+                        
+                        Spacer()
+                                .frame(height: 30)
                         
                         Group {
                             
@@ -163,7 +168,6 @@ struct RecipeDetail: View {
                             }
                             .padding(.horizontal, 12)
                             
-                            Spacer().frame(height: 5)
                         }
                         .padding(.trailing, 30.0)
                     }
