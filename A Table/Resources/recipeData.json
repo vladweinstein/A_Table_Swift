@@ -36,7 +36,7 @@
         "country": "America",
         "ingredients": "Chickpeas\n\n400g / 14 oz can chickpeas, drained\n\n2 tbsp olive oil\n\nChickpeas spices\n\n1 tsp ground cumin\n\n1 1/2 tsp All Spice\n\n1 tsp ground cardamon\n\n1/4 tsp salt\n\nSalad\n\n2 cucumbers , diced\n\n2 tomatoes, diced\n\n1 red onion (small) , diced\n\n1/4 cup coriander leaves (cilantro), roughly chopped\n\n1/4 cup Italian parsley, roughly chopped\n\nDressing \n\n1 1/2 tbsp sherry or balsamic vinegar\n\nZest of half a lemon\n\n2 tbsp lemon juice\n\n1/4 cup extra virgin olive oil\n\n1 tsp caster sugar\n\n1 or 2 garlic clove, smashed\n\n1 teaspoon salt",
         "description": "Combine the Dressing ingredients in a jar and shake. Set aside for 20 minutes to allow the flavors to develop.\n\nPlace chickpeas in a large bowl. Scatter over Spices, toss to coat. The wetness of the chickpeas will make the spices stick.\n\nHeat 2 tbsp olive oil in a large pan over high heat and fry the chickpeas for a couple of minutes. Shake the pan so the chickpeas roll, or stir gently (so the spice coating doesn't come off). Transfer into bowl and cool slightly.\n\nCombine the Salad Ingredients in a bowl. Drizzle with a bit of Dressing and toss. Transfer to serving bowl.\n\nTop salad with chickpeas (warm or at room temperature). Drizzle with more Dressing. Toss very gently, if desired (don't toss too much or spices may shake off of the chickpeas). Serve immediately.\n\nGreat served with Greek yogurt and pita bread to stuff the salad into.",
-        "imageName": "croutonsaladfull"
+        "imageName": "chickpeasaladfull"
     },
     {
         "name": "Sauteed Shrimp",
@@ -115,6 +115,19 @@
         "ingredients": "4 red bell peppers\n\n2  oz tomato paste (approximately 1/3 of a small can)\n\n4 garlic cloves crushed\n\n5 tablespoons olive oil\n\n20 black Moroccan Oil Cured Olives pitted\n\nSalt, Cayenne pepper to taste\n\n1 tablespoon of honey",
         "description": "Preheat oven at 425°F\n\nPlace the Red Bell peppers on a tin foil in a plate in the oven\n\nLet roast for 20 minutes.\n\nTurn the peppers and put back in the oven for another 20 minutes until their skin burns a little.\n\nTake the peppers out of the oven and let them cool down.\n\nWhen cool to the touch, peel them delicately, rinse off any seeds.\n\nCut them into 1 to 1-1/2 inch strips and set in a colander during at least one hour. Discard juices that strain out.\n\n In a separate bowl, mix the tomato paste with the crushed garlic, 2 tablespoons of water and half of the olive oil.\n\nWhen the peppers are drained, put the tomato mix in a hot pan and cook briefly until the garlic is fragrant (5 minutes)\n\nAdd the peppers, the olives and the rest of the olive oil, bring to a very brief boil.\n\nLower the flame and let simmer 20 to 25 minutes.\n\nAdd salt, Cayenne pepper and honey.\n\nLet cool down and serve cold or room temp. Great as a side dish too!",
         "imageName": "redpeppersfull"
+    },
+    {
+        "name": "Tzatziki",
+        "category": "Appetizers",
+        "meat": "Vegetarian",
+        "cookTime": "30 min",
+        "id": 1010,
+        "isFeatured": false,
+        "isFavorite": false,
+        "country": "France",
+        "ingredients": "3 Cucumbers\n\n2 cups of greek yogurt\n\n4 garlic cloves crushed\n\n1 bunch fresh mint\n\nSalt & Pepper",
+        "description": "Slice the cucumbers with a mandolin and mix in the yogurt.",
+        "imageName": "cucumberfull"
     }
     
 ]
