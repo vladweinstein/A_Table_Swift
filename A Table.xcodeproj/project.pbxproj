@@ -17,7 +17,16 @@
 		9C31CF6E266F9749003BD48D /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C31CF6D266F9749003BD48D /* RecipeList.swift */; };
 		9C31EECA267E7E89007924A6 /* RecipeIngredientsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C31EEC9267E7E89007924A6 /* RecipeIngredientsList.swift */; };
 		9C33641A266F85B4001B1DF6 /* recipeData.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C336419266F85B4001B1DF6 /* recipeData.json */; };
-		9C8329D1267416FD0065F50A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C8329D0267416FD0065F50A /* LaunchScreen.storyboard */; };
+		9C4FE412267F54660043A65F /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4FE411267F54660043A65F /* WidgetKit.framework */; };
+		9C4FE414267F54660043A65F /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4FE413267F54660043A65F /* SwiftUI.framework */; };
+		9C4FE417267F54660043A65F /* Recipe_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4FE416267F54660043A65F /* Recipe_Widget.swift */; };
+		9C4FE419267F54670043A65F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C4FE418267F54670043A65F /* Assets.xcassets */; };
+		9C4FE41D267F54670043A65F /* Recipe WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9C4FE40F267F54660043A65F /* Recipe WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9C4FE424267F64E80043A65F /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFDA7CB266F0BB700615706 /* ModelData.swift */; };
+		9C4FE425267F64EC0043A65F /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFDA7C9266F058200615706 /* Recipe.swift */; };
+		9C4FE426267F64F00043A65F /* recipeData.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C336419266F85B4001B1DF6 /* recipeData.json */; };
+		9C7A7507267FFA7E00663EA4 /* A_Table_AppIcon_Launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C7A7506267FFA7E00663EA4 /* A_Table_AppIcon_Launch.png */; };
+		9C7A7508268020D200663EA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C8329D0267416FD0065F50A /* LaunchScreen.storyboard */; };
 		9C86FAED266F9C5D00107B2D /* RecipeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C86FAEC266F9C5D00107B2D /* RecipeDetail.swift */; };
 		9C86FAEF266F9F5500107B2D /* RectangleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C86FAEE266F9F5500107B2D /* RectangleImage.swift */; };
 		9CA486EC266FD5EE000E778C /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA486EB266FD5EE000E778C /* PageViewController.swift */; };
@@ -27,9 +36,6 @@
 		9CACC237267135F2008840AD /* SettingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CACC236267135F2008840AD /* SettingsPage.swift */; };
 		9CACC23926713938008840AD /* LegalText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CACC23826713938008840AD /* LegalText.swift */; };
 		9CACC23B26714334008840AD /* AppCredits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CACC23A26714334008840AD /* AppCredits.swift */; };
-		9CC6B1DA26753CD10070100C /* A_Table_LaunchScreen_x2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CC6B1D926753CD10070100C /* A_Table_LaunchScreen_x2.png */; };
-		9CCC07192672B4EB00B4BE5D /* ATableLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CCC07182672B4EB00B4BE5D /* ATableLogo.png */; };
-		9CCC071D2672BBD900B4BE5D /* ATableAppLogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CCC071C2672BBD900B4BE5D /* ATableAppLogo.jpg */; };
 		9CFDA7B3266EECA900615706 /* A_TableApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFDA7B2266EECA900615706 /* A_TableApp.swift */; };
 		9CFDA7B5266EECA900615706 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFDA7B4266EECA900615706 /* ContentView.swift */; };
 		9CFDA7B7266EECAB00615706 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CFDA7B6266EECAB00615706 /* Assets.xcassets */; };
@@ -37,6 +43,30 @@
 		9CFDA7CA266F058200615706 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFDA7C9266F058200615706 /* Recipe.swift */; };
 		9CFDA7CC266F0BB700615706 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFDA7CB266F0BB700615706 /* ModelData.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9C4FE41B267F54670043A65F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CFDA7A7266EECA900615706 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C4FE40E267F54660043A65F;
+			remoteInfo = "Recipe WidgetExtension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9C4FE41E267F54670043A65F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9C4FE41D267F54670043A65F /* Recipe WidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9C1F782F266FBB8800904D1D /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
@@ -49,6 +79,15 @@
 		9C31CF6D266F9749003BD48D /* RecipeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeList.swift; sourceTree = "<group>"; };
 		9C31EEC9267E7E89007924A6 /* RecipeIngredientsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeIngredientsList.swift; sourceTree = "<group>"; };
 		9C336419266F85B4001B1DF6 /* recipeData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = recipeData.json; path = "A Table/Resources/recipeData.json"; sourceTree = SOURCE_ROOT; };
+		9C4FE40F267F54660043A65F /* Recipe WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Recipe WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C4FE411267F54660043A65F /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		9C4FE413267F54660043A65F /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		9C4FE416267F54660043A65F /* Recipe_Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe_Widget.swift; sourceTree = "<group>"; };
+		9C4FE418267F54670043A65F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9C4FE41A267F54670043A65F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C4FE422267F560E0043A65F /* Recipe WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Recipe WidgetExtension.entitlements"; sourceTree = "<group>"; };
+		9C4FE423267F56950043A65F /* A Table.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "A Table.entitlements"; sourceTree = "<group>"; };
+		9C7A7506267FFA7E00663EA4 /* A_Table_AppIcon_Launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = A_Table_AppIcon_Launch.png; sourceTree = "<group>"; };
 		9C8329D0267416FD0065F50A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C86FAEC266F9C5D00107B2D /* RecipeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetail.swift; sourceTree = "<group>"; };
 		9C86FAEE266F9F5500107B2D /* RectangleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleImage.swift; sourceTree = "<group>"; };
@@ -59,9 +98,6 @@
 		9CACC236267135F2008840AD /* SettingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPage.swift; sourceTree = "<group>"; };
 		9CACC23826713938008840AD /* LegalText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalText.swift; sourceTree = "<group>"; };
 		9CACC23A26714334008840AD /* AppCredits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCredits.swift; sourceTree = "<group>"; };
-		9CC6B1D926753CD10070100C /* A_Table_LaunchScreen_x2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = A_Table_LaunchScreen_x2.png; sourceTree = "<group>"; };
-		9CCC07182672B4EB00B4BE5D /* ATableLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ATableLogo.png; sourceTree = "<group>"; };
-		9CCC071C2672BBD900B4BE5D /* ATableAppLogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ATableAppLogo.jpg; sourceTree = "<group>"; };
 		9CFDA7AF266EECA900615706 /* A Table.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "A Table.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CFDA7B2266EECA900615706 /* A_TableApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A_TableApp.swift; sourceTree = "<group>"; };
 		9CFDA7B4266EECA900615706 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,6 +109,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9C4FE40C267F54660043A65F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C4FE414267F54660043A65F /* SwiftUI.framework in Frameworks */,
+				9C4FE412267F54660043A65F /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9CFDA7AC266EECA900615706 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -114,6 +159,25 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
+		9C4FE410267F54660043A65F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C4FE411267F54660043A65F /* WidgetKit.framework */,
+				9C4FE413267F54660043A65F /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9C4FE415267F54660043A65F /* Recipe Widget */ = {
+			isa = PBXGroup;
+			children = (
+				9C4FE416267F54660043A65F /* Recipe_Widget.swift */,
+				9C4FE418267F54670043A65F /* Assets.xcassets */,
+				9C4FE41A267F54670043A65F /* Info.plist */,
+			);
+			path = "Recipe Widget";
+			sourceTree = "<group>";
+		};
 		9CA486EA266FD5BB000E778C /* PageView */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,8 +203,11 @@
 		9CFDA7A6266EECA900615706 = {
 			isa = PBXGroup;
 			children = (
+				9C4FE422267F560E0043A65F /* Recipe WidgetExtension.entitlements */,
 				9C8329D0267416FD0065F50A /* LaunchScreen.storyboard */,
 				9CFDA7B1266EECA900615706 /* A Table */,
+				9C4FE415267F54660043A65F /* Recipe Widget */,
+				9C4FE410267F54660043A65F /* Frameworks */,
 				9CFDA7B0266EECA900615706 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -149,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				9CFDA7AF266EECA900615706 /* A Table.app */,
+				9C4FE40F267F54660043A65F /* Recipe WidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,15 +224,14 @@
 		9CFDA7B1266EECA900615706 /* A Table */ = {
 			isa = PBXGroup;
 			children = (
+				9C4FE423267F56950043A65F /* A Table.entitlements */,
 				9CFDA7B2266EECA900615706 /* A_TableApp.swift */,
 				9CFDA7CD266F0C2700615706 /* Views */,
 				9CFDA7CE266F0C3300615706 /* Model */,
 				9CFDA7CF266F0C4500615706 /* Resources */,
 				9CFDA7B6266EECAB00615706 /* Assets.xcassets */,
+				9C7A7506267FFA7E00663EA4 /* A_Table_AppIcon_Launch.png */,
 				9CFDA7BB266EECAB00615706 /* Info.plist */,
-				9CCC071C2672BBD900B4BE5D /* ATableAppLogo.jpg */,
-				9CC6B1D926753CD10070100C /* A_Table_LaunchScreen_x2.png */,
-				9CCC07182672B4EB00B4BE5D /* ATableLogo.png */,
 				9CFDA7B8266EECAB00615706 /* Preview Content */,
 			);
 			path = "A Table";
@@ -211,6 +278,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9C4FE40E267F54660043A65F /* Recipe WidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C4FE421267F54670043A65F /* Build configuration list for PBXNativeTarget "Recipe WidgetExtension" */;
+			buildPhases = (
+				9C4FE40B267F54660043A65F /* Sources */,
+				9C4FE40C267F54660043A65F /* Frameworks */,
+				9C4FE40D267F54660043A65F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Recipe WidgetExtension";
+			productName = "Recipe WidgetExtension";
+			productReference = 9C4FE40F267F54660043A65F /* Recipe WidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		9CFDA7AE266EECA900615706 /* A Table */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9CFDA7BE266EECAB00615706 /* Build configuration list for PBXNativeTarget "A Table" */;
@@ -218,10 +302,12 @@
 				9CFDA7AB266EECA900615706 /* Sources */,
 				9CFDA7AC266EECA900615706 /* Frameworks */,
 				9CFDA7AD266EECA900615706 /* Resources */,
+				9C4FE41E267F54670043A65F /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9C4FE41C267F54670043A65F /* PBXTargetDependency */,
 			);
 			name = "A Table";
 			packageProductDependencies = (
@@ -236,9 +322,12 @@
 		9CFDA7A7266EECA900615706 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1250;
+				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					9C4FE40E267F54660043A65F = {
+						CreatedOnToolsVersion = 13.0;
+					};
 					9CFDA7AE266EECA900615706 = {
 						CreatedOnToolsVersion = 12.5;
 					};
@@ -260,28 +349,46 @@
 			projectRoot = "";
 			targets = (
 				9CFDA7AE266EECA900615706 /* A Table */,
+				9C4FE40E267F54660043A65F /* Recipe WidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9C4FE40D267F54660043A65F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C4FE419267F54670043A65F /* Assets.xcassets in Resources */,
+				9C4FE426267F64F00043A65F /* recipeData.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9CFDA7AD266EECA900615706 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CC6B1DA26753CD10070100C /* A_Table_LaunchScreen_x2.png in Resources */,
-				9CCC071D2672BBD900B4BE5D /* ATableAppLogo.jpg in Resources */,
+				9C7A7507267FFA7E00663EA4 /* A_Table_AppIcon_Launch.png in Resources */,
 				9C33641A266F85B4001B1DF6 /* recipeData.json in Resources */,
 				9CFDA7BA266EECAB00615706 /* Preview Assets.xcassets in Resources */,
-				9C8329D1267416FD0065F50A /* LaunchScreen.storyboard in Resources */,
+				9C7A7508268020D200663EA4 /* LaunchScreen.storyboard in Resources */,
 				9CFDA7B7266EECAB00615706 /* Assets.xcassets in Resources */,
-				9CCC07192672B4EB00B4BE5D /* ATableLogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9C4FE40B267F54660043A65F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C4FE425267F64EC0043A65F /* Recipe.swift in Sources */,
+				9C4FE417267F54660043A65F /* Recipe_Widget.swift in Sources */,
+				9C4FE424267F64E80043A65F /* ModelData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9CFDA7AB266EECA900615706 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -313,7 +420,71 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		9C4FE41C267F54670043A65F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C4FE40E267F54660043A65F /* Recipe WidgetExtension */;
+			targetProxy = 9C4FE41B267F54670043A65F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		9C4FE41F267F54670043A65F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "Recipe WidgetExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2FY37TDGUY;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Recipe Widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Recipe Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.VladimirWeinstein.A-Table.Recipe-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9C4FE420267F54670043A65F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "Recipe WidgetExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2FY37TDGUY;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Recipe Widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Recipe Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.VladimirWeinstein.A-Table.Recipe-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		9CFDA7BC266EECAB00615706 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -434,9 +605,11 @@
 		9CFDA7BF266EECAB00615706 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = "A Table/A Table.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"A Table/Preview Content\"";
 				DEVELOPMENT_TEAM = 2FY37TDGUY;
@@ -460,9 +633,11 @@
 		9CFDA7C0266EECAB00615706 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = "A Table/A Table.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"A Table/Preview Content\"";
 				DEVELOPMENT_TEAM = 2FY37TDGUY;
@@ -486,6 +661,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9C4FE421267F54670043A65F /* Build configuration list for PBXNativeTarget "Recipe WidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C4FE41F267F54670043A65F /* Debug */,
+				9C4FE420267F54670043A65F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9CFDA7AA266EECA900615706 /* Build configuration list for PBXProject "A Table" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
