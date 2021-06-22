@@ -1,6 +1,9 @@
 [
     {
         "name": "Roast Chicken",
+        "isBreakfast": false,
+        "isLunch": false,
+        "isDinner": true,
         "category": "Main Course",
         "meat": "Poultry",
         "cookTime": "90 minutes",
@@ -27,11 +30,14 @@
     },
     {
         "name": "Meatballs",
+        "isBreakfast": false,
+        "isLunch": true,
+        "isDinner": false,
         "category": "Main Course",
         "meat": "Beef, Lamb",
         "cookTime": "2 hours",
         "id": 1002,
-        "isFeatured": false,
+        "isFeatured": true,
         "isFavorite": true,
         "country": "France",
         "ingredients": [
@@ -54,6 +60,9 @@
     },
     {
         "name": "Chickpea Salad",
+        "isBreakfast": false,
+        "isLunch": true,
+        "isDinner": false,
         "category": "Appetizers",
         "meat": "Vegetarian",
         "cookTime": "20 minutes",
@@ -86,6 +95,9 @@
     },
     {
         "name": "Sauteed Shrimp",
+        "isBreakfast": false,
+        "isLunch": true,
+        "isDinner": false,
         "category": "Main Course",
         "meat": "Shellfish",
         "cookTime": "5 minutes",
@@ -105,6 +117,9 @@
     },
     {
         "name": "Oeufs Mimosa",
+        "isBreakfast": true,
+        "isLunch": false,
+        "isDinner": false,
         "category": "Appetizers",
         "meat": "Vegetarian",
         "cookTime": "5 minutes",
@@ -125,6 +140,9 @@
     },
     {
         "name": "Apple Compote",
+        "isBreakfast": true,
+        "isLunch": false,
+        "isDinner": true,
         "category": "Sweets & Desserts",
         "meat": "Vegetarian",
         "cookTime": "1 hour",
@@ -145,6 +163,9 @@
     },
     {
         "name": "Caramel Flan",
+        "isBreakfast": false,
+        "isLunch": true,
+        "isDinner": false,
         "category": "Sweets & Desserts",
         "meat": "Vegetarian",
         "cookTime": "1 hour",
@@ -167,6 +188,9 @@
     },
     {
         "name": "Fraises au vin rouge",
+        "isBreakfast": false,
+        "isLunch": false,
+        "isDinner": true,
         "category": "Sweets & Desserts",
         "meat": "Vegetarian",
         "cookTime": "10 minutes",
@@ -189,6 +213,9 @@
     },
     {
         "name": "Roasted Bell Peppers",
+        "isBreakfast": false,
+        "isLunch": true,
+        "isDinner": false,
         "category": "Appetizers",
         "meat": "Vegetarian",
         "cookTime": "1 hour",
@@ -210,6 +237,9 @@
     },
     {
         "name": "Tzatziki",
+        "isBreakfast": true,
+        "isLunch": false,
+        "isDinner": true,
         "category": "Appetizers",
         "meat": "Vegetarian",
         "cookTime": "30 min",

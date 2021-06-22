@@ -4,6 +4,7 @@
 //
 //  Created by Vladimir Weinstein on 6/21/21.
 //
+// Checkbox currently not in use
 
 import SwiftUI
 

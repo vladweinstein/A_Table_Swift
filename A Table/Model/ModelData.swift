@@ -23,6 +23,18 @@ class ModelData: ObservableObject {
         recipes.filter { $0.isFeatured }
     }
     
+    var breakfasts: [Recipe] {
+        recipes.filter { $0.isBreakfast }
+    }
+    
+    var lunches: [Recipe] {
+        recipes.filter { $0.isLunch }
+    }
+    
+    var dinners: [Recipe] {
+        recipes.filter { $0.isDinner }
+    }
+    
     var categories: [String: [Recipe]] {
         Dictionary(
             grouping: recipes,
