@@ -52,7 +52,7 @@ struct Recipe_WidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        Image("applesaucefull")
+        Image("applesauce")
             .resizable()
             .aspectRatio(3 / 2, contentMode: .fill)
             .overlay(TextOverlay())

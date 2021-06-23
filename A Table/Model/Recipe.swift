@@ -17,6 +17,7 @@ struct Recipe: Hashable, Codable, Identifiable {
     var ingredients: [String]
     var isFavorite: Bool
     var isFeatured: Bool
+    var imageDescription: String
     var isBreakfast, isLunch, isDinner: Bool
     
     

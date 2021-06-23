@@ -21,51 +21,55 @@ struct SettingsPage: View {
                     NavigationLink(destination: LegalText()) {
                         Label {
                             Text("Legal")
-                                
                         } icon: {
                             Image(systemName: "doc.text.magnifyingglass")
                                 .symbolRenderingMode(.palette)
                                 .foregroundStyle(.brown, .yellow)
                         }
                     }
+                    .accessibilityHint("Tap to view legal documentation")
                     NavigationLink(destination: AppCredits()) {
                         Label {
                             Text("Acknowledgments")
-                                
+                            
                         } icon: {
                             Image(systemName: "chevron.left.forwardslash.chevron.right")
                                 .foregroundStyle(.yellow)
                         }
                     }
+                    .accessibilityHint("Tap to view acknowledgements for application and recipe development.")
                 }
                 Section(header: Text("Recipe Submission")
-                            ) {
-                Button(action: {
-                    if MFMailComposeViewController.canSendMail() {
-                        self.isShowingMailView.toggle()
-                    } else {
-                        print("Can't send emails from this device")
-                    }
-                    if result != nil {
-                        print("Result: \(String(describing: result))")
-                    }
-                }) {
-                    Label {
-                        Text("Share a recipe / new feature request")
+                ) {
+                    Button(action: {
+                        if MFMailComposeViewController.canSendMail() {
+                            self.isShowingMailView.toggle()
+                        } else {
+                            print("Can't send emails from this device")
+                        }
+                        if result != nil {
+                            print("Result: \(String(describing: result))")
+                        }
+                    }) {
+                        Label {
+                            Text("Share a recipe / new feature request")
                             
-                    } icon: {
-                        Image(systemName: "fork.knife")
-                            .foregroundStyle(.yellow)
+                        } icon: {
+                            Image(systemName: "fork.knife")
+                                .foregroundStyle(.yellow)
+                        }
                     }
+                    .accessibilityHint("Tap to open e-mail composer sheet")
+                    // .disabled(!MFMailComposeViewController.canSendMail())
+                    Image("vladcooks")
+                        .renderingMode(.original)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .cornerRadius(5)
+                        .padding(.trailing, 10)
+                        .accessibilityLabel("Image of application developer, Vladimir Weinstein, in his kitchen facing a camera")
+                        .accessibility(removeTraits: .isImage)
                 }
-                // .disabled(!MFMailComposeViewController.canSendMail())
-                Image("vladcooks")
-                    .renderingMode(.original)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .cornerRadius(5)
-                    .padding(.trailing, 10)
-            }
             }
             
             .sheet(isPresented: $isShowingMailView) {
@@ -77,7 +81,7 @@ struct SettingsPage: View {
             
             .navigationTitle("Settings")
             Spacer()
-        
+            
             
         }
     }

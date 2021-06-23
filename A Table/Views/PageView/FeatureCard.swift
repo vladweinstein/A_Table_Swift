@@ -11,7 +11,7 @@ import SwiftUI
 struct FeatureCard: View {
     var recipe: Recipe
     
-    // Building function to rotate through breakfast/lunch/dinner recipes showcased in FeatureCard in CategoryHome based on calendar hour.
+    // Building function to rotate through breakfast/lunch/dinner images of recipes showcased in CategoryHome based on calendar hour.
     // Function not currently in use.
     
     // Must update features.map in CategoryHome line 35

@@ -11,6 +11,7 @@
         "isFeatured": true,
         "isFavorite": true,
         "country": "France",
+        "imageDescription": "Image of a roast chicken on a cooling rack",
         "ingredients": [
             "4 pound whole chicken",
             "1/4 cup unsalted butter, melted",
@@ -26,7 +27,7 @@
         ],
         
         "description": "Take chicken out of fridge one to two hours before starting your roast. Don’t forget to remove giblets and neck from cavity.\n\nPreheat oven at 430°F.\n\nRinse and pat dry the chicken with paper towel.\n\nSeason the chicken generously, outside and inside with salt, pepper and parsley. \n\nCombine olive oil, melted butter, wine and lemon juice.\n\nRub the above mixture all over the chicken, under the skin and inside the cavity.\n\nStuff the garlic head into the chicken cavity along with the thyme, the rosemary sprigs and the squeezed lemon halve.\n\n Set the chicken breast-side up in a roasting pan, and place in the oven.\n\nAfter one hour, lower the temperature to 325°F for another 20 to 30 minutes.\n\nIf the skin looks burnt, lay an aluminum foil on top of the chicken and continue cooking.\n\nBaste the chicken every 30 minutes.\n\nWhen the Chicken is cooked, remove it from the oven, cover with foil and allow to stand for 10 minutes before carving.\n\nDrizzle with juices from pan and lemon juice, then serve.\n\n",
-        "imageName": "roastchickenfull"
+        "imageName": "roastchicken"
     },
     {
         "name": "Meatballs",
@@ -34,12 +35,13 @@
         "isLunch": true,
         "isDinner": false,
         "category": "Main Course",
-        "meat": "Beef, Lamb",
+        "meat": "Beef and lamb",
         "cookTime": "2 hours",
         "id": 1002,
         "isFeatured": true,
         "isFavorite": true,
         "country": "France",
+        "imageDescription": "Image of grilled meatballs frying in a pan",
         "ingredients": [
             "1/2 pound ground beef","1/2 pound ground lamb",
             "1/3 cup bread crumbs",
@@ -56,7 +58,7 @@
             "1 mixing bowl"
         ],
         "description": "If using breadcrumbs, disregard this first step. Put the bread to soak in the milk during 5 minutes then press it between your fingers. You can discard the rest of the milk.\n\nIn your mixing bowl, place all the ingredients except the flour.\n\nMix everything carefully, using your hands if possible.\n\nRoll the meatballs between your two hands, then roll each meat ball in the flour and set the floured meat balls on a plate.\n\nPut the plate with the meat balls in the fridge for about one hour (very important step).\n\nWarm the oil at 350°F in a frying pan and cook the meat balls in small batches so the oil’s temperature stays the same throughout. You want the meatballs to get golden brown but not fully cooked.\n\nTake out them once golden brown, set them aside and discard the oil (but do not wash the pan).\n\nAdd the tomato sauce in the pan, warm at 300°F approximately. When the sauce is warm, add the meatballs cover the pan with a lid and let cook for another 15 to 20 minutes.\n\nServe your meatballs on rice, spaghetti, or mashed potatoes, with a side of green lettuce.",
-        "imageName": "meatballsfull"
+        "imageName": "meatballs"
     },
     {
         "name": "Chickpea Salad",
@@ -70,6 +72,7 @@
         "isFeatured": false,
         "isFavorite": true,
         "country": "America",
+        "imageDescription": "Image of a chickpea salad containing red bell peppers, olives and chickpeas.",
         "ingredients": [
             "14 oz can of chickpeas, drained",
             "2 tbsp olive oil",
@@ -91,7 +94,7 @@
             "1 teaspoon salt"
         ],
         "description": "Combine the Dressing ingredients in a jar and shake. Set aside for 20 minutes to allow the flavors to develop.\n\nPlace chickpeas in a large bowl. Scatter over Spices, toss to coat. The wetness of the chickpeas will make the spices stick.\n\nHeat 2 tbsp olive oil in a large pan over high heat and fry the chickpeas for a couple of minutes. Shake the pan so the chickpeas roll, or stir gently (so the spice coating doesn't come off). Transfer into bowl and cool slightly.\n\nCombine the Salad Ingredients in a bowl. Drizzle with a bit of Dressing and toss. Transfer to serving bowl.\n\nTop salad with chickpeas (warm or at room temperature). Drizzle with more Dressing. Toss very gently, if desired (don't toss too much or spices may shake off of the chickpeas). Serve immediately.\n\nGreat served with Greek yogurt and pita bread to stuff the salad into.",
-        "imageName": "chickpeasaladfull"
+        "imageName": "chickpeasalad"
     },
     {
         "name": "Sauteed Shrimp",
@@ -105,6 +108,7 @@
         "isFeatured": false,
         "isFavorite": true,
         "country": "Italy",
+        "imageDescription": "Image of shrimps frying in a pan with butter and garlic.",
         "ingredients": [
             "1 serving: 5 to 8 medium sized shrimps",
             "1 tablespoon salted butter",
@@ -113,7 +117,7 @@
             "salt & pepper"
         ],
         "description": "This can be made with fresh shrimp or frozen. Eitherway, make sure to lose the shells and devain the shrimps (unless you love them).\n\nRinse and pat dry, then place on a flat surface or plate. Sift flour onto shrimp, evenly distributing flour all around.\n\nHeat up a non-stick or cast iron to a medium to high heat, and drop in your butter with oil. Once the butter is frothing, gently drop in your shrimps.\n\nAfter 15 to 30 seconds, flip the shrimps and you should see pink already coming through. Once the flesh of the shrimp is less oqaque, turn off the heat and transfer shrimp to dish. The residual heat will keep cooking them, so don't wait until they are fully white, or you'll be eating rubber. On that note, bon appetit!",
-        "imageName": "buttershrimpfull"
+        "imageName": "buttershrimp"
     },
     {
         "name": "Oeufs Mimosa",
@@ -127,6 +131,7 @@
         "isFeatured": true,
         "isFavorite": false,
         "country": "Global",
+        "imageDescription": "Image of deviled eggs garnished with parsley, on a plate.",
         "ingredients": [
             "12 Eggs",
             "1/2 cup Mayonnaise",
@@ -136,7 +141,7 @@
             "Herbed salt"
         ],
         "description": "This may also be known as deviled eggs. Prep 6 cups of water to boil in a large pot.\n\nWhen the water reaches a rolling boil, drop in the eggs delicately.\n\nAfter 10 minutes, strain the water from the pan and run cold water over the eggs to cool them quickly.\n\nPeel them: it is easier to peel the eggs under running water.\n\nCut the hard boiled eggs in half lengthwise. Carefully remove the yolks with a spoon and divide the yolks into two batches in separate bowls.\n\nBatch 1: Mash the egg yolks, add some herbed salt, then add just enough mayonnaise to make a smooth spread  and fill the egg whites with this spread.\n\nBatch 2: Using a Rotary Cheese Grater or a grater with small holes, grate the yolks in a bowl.\n\nAdd parsley and sea salt to that batch and mix delicately with a fork.\n\nSprinkle the fluffy egg yolk generously over the filled eggs.\n\nDecorate with half pitted olive and half anchovy.",
-        "imageName": "eggmimosafull"
+        "imageName": "eggmimosa"
     },
     {
         "name": "Apple Compote",
@@ -150,6 +155,7 @@
         "isFeatured": false,
         "isFavorite": false,
         "country": "France",
+        "imageDescription": "Image of quartered apples and a cinnamon stick in a pot",
         "ingredients": [
             "3 peeled apples",
             "1/4 cup brown sugar",
@@ -159,7 +165,7 @@
             "1 matching lid"
         ],
         "description": "Peel and cut the apples in quarters\n\nPlace the apples in a medium sized sauce pot with water and sprinkle with brown sugar. Place the cinnamon sticks in pot with apples\n\nAfter 10 minutes, lower the heat to a low heat or fire to simmer for an hour.\n\nWhen the apples are soft to the touch, they are ready. Take them off the heat and let them rest. Serve hot or cold.\n\nEnjoy!",
-        "imageName": "applesaucefull"
+        "imageName": "applesauce"
     },
     {
         "name": "Caramel Flan",
@@ -170,9 +176,10 @@
         "meat": "Vegetarian",
         "cookTime": "1 hour",
         "id": 1007,
-        "isFeatured": true,
+        "isFeatured": false,
         "isFavorite": false,
         "country": "France",
+        "imageDescription": "Image of a circular flan in a pool of caramel.",
         "ingredients": [
             "1 liter milk",
             "6 whole eggs",
@@ -184,7 +191,7 @@
             "Deep dish for bain-marie (water bath)"
         ],
         "description": "Flan in French: Crème caramel renversée\n\n Preheat oven to 320 F\n\nCaramel : set sugar and water in a saucepan and let come to a little boil. Watch closely. When the sugar starts turning a honey color, turn off the heat.\n\n Slowly pour caramel evenly throughout ramequins and let cool to harden.\n\nIn a separate pot, bring the milk and vanilla to a near-boil, then turn off the heat. In a large mixing bowl, whisk the eggs, then add sugar to the mix, whisking consistently.\n\nStraining through a small chinois or colander, slowly pour the warm milk into the egg mixture, whisking quickly for about 2 minutes.\n\nPour the mix into the ramequins with hardened caramel.\n\nPlace the ramequins in a bain-marie in a deep tray or dish(‘bain-marie’ is a very warm bath of water). Place the tray in the 320F oven on a center or lower rack.\n\nThe water should never reach the point of boiling while in the oven.\n\nCook for about 45 min and test with a knife to see if cook is done. If and when the knife comes out clean, take the tray out of the oven.\n\nLet the flans cool down for 15 to 20 minutes, then store in the refrigerator for least 4 hours.\n\nBefore serving, place the ramequins in a dish with very warm water, let them sit for 5 minutes and turn them over, one by one, onto a shallow plate/dish with a swift and firm movement. The flipped flan should easily slip out of the ramequin onto the dish, with any melted caramel.",
-        "imageName": "flanfull"
+        "imageName": "caramelflan"
     },
     {
         "name": "Fraises au vin rouge",
@@ -198,6 +205,7 @@
         "isFeatured": false,
         "isFavorite": false,
         "country": "France",
+        "imageDescription": "Image of strawberries in a glass of wine, topped with four leaves of mint.",
         "ingredients": [
             "1 lb strawberries",
             "14 oz of red wine (Bordeaux or Cabernet)",
@@ -209,7 +217,7 @@
             "1 cardamome pod"
         ],
         "description": "In a sauce pan, bring to a boil the wine, the cinnamon stick and the sugar and lower the flame to simmer nicely 15 or 20 minutes, turn off the flame and let cool down.\n\nWash the strawberries and pat them dry delicately.\n\nCut the strawberries in two or three lengthwise, according to their size.\n\nPut the strawberries in a bowl. Filter the wine mixture and pour it over the strawberries.\n\nStore in the fridge for at least six hours prior to before serving.",
-        "imageName": "strawberriesfull"
+        "imageName": "strawberries"
     },
     {
         "name": "Roasted Bell Peppers",
@@ -223,6 +231,7 @@
         "isFeatured": true,
         "isFavorite": false,
         "country": "France",
+        "imageDescription": "Image of a roasted bell pepper salad",
         "ingredients": [
             "4 red bell peppers",
             "2 oz tomato paste",
@@ -233,7 +242,7 @@
             "1 tablespoon of honey"
         ],
         "description": "Preheat oven at 425°F\n\nPlace the Red Bell peppers on a tin foil in a plate in the oven\n\nLet roast for 20 minutes.\n\nTurn the peppers and put back in the oven for another 20 minutes until their skin burns a little.\n\nTake the peppers out of the oven and let them cool down.\n\nWhen cool to the touch, peel them delicately, rinse off any seeds.\n\nCut them into 1 to 1-1/2 inch strips and set in a colander during at least one hour. Discard juices that strain out.\n\n In a separate bowl, mix the tomato paste with the crushed garlic, 2 tablespoons of water and half of the olive oil.\n\nWhen the peppers are drained, put the tomato mix in a hot pan and cook briefly until the garlic is fragrant (5 minutes)\n\nAdd the peppers, the olives and the rest of the olive oil, bring to a very brief boil.\n\nLower the flame and let simmer 20 to 25 minutes.\n\nAdd salt, Cayenne pepper and honey.\n\nLet cool down and serve cold or room temp. Great as a side dish too!",
-        "imageName": "redpeppersfull"
+        "imageName": "redpeppers"
     },
     {
         "name": "Tzatziki",
@@ -247,6 +256,7 @@
         "isFeatured": false,
         "isFavorite": false,
         "country": "Greece",
+        "imageDescription": "Image of sliced cucumber in yogurt, topped with mint",
         "ingredients": [
             "1 cup Greek whole milk yogurt",
             "1 English cucumber, sliced with a mandolin",
@@ -260,7 +270,7 @@
             "Kosher salt and freshly cracked black pepper"
         ],
         "description": "Slice the cucumber thinly with a mandolin and set the slices in a colander with a little kosher salt. Place a plate on top and let the cucumber drain for half hour.\n\nPat down with paper towel to dry cucumber as much as possible.\n\nIn a bowl, mix the Greek yogurt, the onion, and all the ingredients except the salt.\n\nMix everything thoroughly and add the cucumber before mixing again.\n\nThere might be some watery mixture if you keep in the fridge for more than a few hours, you can chose to mix again and serve as is, or discard the extra moisture.\n\nDecorate with a mint leaf and serve as a dip with pita bread, or as a sauce with grilled meat.",
-        "imageName": "cucumberfull"
+        "imageName": "cucumber"
     }
     
 ]

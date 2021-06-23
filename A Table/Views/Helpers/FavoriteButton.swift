@@ -20,6 +20,8 @@ struct FavoriteButton: View {
                     .foregroundStyle(isSet ? .yellow : .gray)
                     .imageScale(.large)
                     .scaleEffect(isSet ? 1.2 : 1.1)
+                    .accessibilityLabel(isSet ? "Favorite" : "Unfavorite")
+                    .accessibilityHint(isSet ? "Tap to unfavorite recipe." : "Tap to favorite recipe.")
             }
         }
     }

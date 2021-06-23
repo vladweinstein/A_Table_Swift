@@ -54,6 +54,7 @@ struct RecipeList: View {
                         .tint(.yellow)
                         }
                 }
+                .accessibilityHint("Tap to view recipe")
                 
             }
             .searchable(text: $query)

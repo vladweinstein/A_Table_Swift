@@ -42,7 +42,6 @@ struct CategoryHome: View {
             }
             
             .navigationTitle(getGreeting())
-            
         }
     }
 }

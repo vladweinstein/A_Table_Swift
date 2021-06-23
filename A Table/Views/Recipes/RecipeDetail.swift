@@ -45,18 +45,19 @@ struct RecipeDetail: View {
                         let height = getHeight(outerReader: outerReader, reader: reader, imageHeight: reader.size.height)
                         
                         HStack {
-                            RectangleImage(image: recipe.image)
-                                .image.resizable()
+                            recipe.image
+                                .resizable()
                                 .scaledToFill()
                                 .frame(height: height)
                                 .clipped()
                                 .offset(x: 0, y: offsetY)
-                                
                         }
                         
                         .frame(width: reader.size.width)
                     }
                     .frame(height: 320)
+                    .accessibility(removeTraits: .isImage)
+                    .accessibilityHint(recipe.imageDescription)
                     
                     VStack(alignment: .leading) {
                         HStack {
@@ -73,25 +74,30 @@ struct RecipeDetail: View {
                             Text(recipe.meat)
                             Spacer()
                             Text(recipe.cookTime)
-                            
                         }
                         .font(.title3)
                         .foregroundColor(.secondary)
                         .padding(.horizontal, 20)
                         .padding(.bottom, 20)
+                        .accessibilityElement(children: .ignore)
+                        .accessibility(label: Text(recipe.meat + "cook time" + recipe.cookTime))
                         
                         Divider()
                         
                         VStack {
                             HStack {
                                 
-                                VStack() {
+                                VStack(alignment: .leading) {
                                     Text("Ingredients")
                                         .font(.headline)
-                                    Text("Tap to show/hide")
+                                    Text("Tap the book on the right\n to show or hide ingredients.")
                                         .font(.caption)
                                         .foregroundColor(.secondary)
+                                    
                                 }
+                                .accessibilityElement(children: .ignore)
+                                .accessibility(label: Text("Ingredients. Tap the book on the right to show or hide ingredients."))
+                                .accessibilityHint("Swipe right for ingredients button")
                                 
                                 Spacer()
                                 
@@ -106,6 +112,10 @@ struct RecipeDetail: View {
                                         .imageScale(.large)
                                         .rotationEffect(.degrees(showIngredients ? 20 : 0))
                                         .scaleEffect(showIngredients ? 1.1 : 1)
+                                        .accessibility(removeTraits: .isButton)
+                                        .accessibilityLabel(showIngredients ? "Hide ingredients" : "Show ingredients")
+                                        .accessibilityHint(showIngredients ? "Tap to hide ingredients." : "Tap to show ingredients.")
+                                    
                                 }
                             }
                             .padding(.horizontal, 30)
@@ -121,19 +131,20 @@ struct RecipeDetail: View {
                                 .font(.headline)
                                 .padding(.bottom, 15)
                                 .padding(.top, 10)
+                                .accessibilityLabel("Directions are written below.")
                             Text(recipe.description)
-                                
+                            
                         }
-                    
+                        
                         .padding(.horizontal, 25)
                         
                         Spacer()
-                                .frame(height: 30)
+                            .frame(height: 30)
                         
                         Divider()
                         
                         Spacer()
-                                .frame(height: 30)
+                            .frame(height: 30)
                         
                         Group {
                             
