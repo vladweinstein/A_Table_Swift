@@ -19,10 +19,23 @@ struct SettingsPage: View {
             List {
                 Section(header: Text("Legal & Acknowledgments")) {
                     NavigationLink(destination: LegalText()) {
-                        Label("Legal", systemImage: "doc.text.magnifyingglass")
+                        Label {
+                            Text("Legal")
+                                
+                        } icon: {
+                            Image(systemName: "doc.text.magnifyingglass")
+                                .symbolRenderingMode(.palette)
+                                .foregroundStyle(.brown, .yellow)
+                        }
                     }
                     NavigationLink(destination: AppCredits()) {
-                        Label("Acknowledgments", systemImage: "chevron.left.slash.chevron.right")
+                        Label {
+                            Text("Acknowledgments")
+                                
+                        } icon: {
+                            Image(systemName: "chevron.left.forwardslash.chevron.right")
+                                .foregroundStyle(.yellow)
+                        }
                     }
                 }
                 Section(header: Text("Recipe Submission")
@@ -37,7 +50,13 @@ struct SettingsPage: View {
                         print("Result: \(String(describing: result))")
                     }
                 }) {
-                    Label("Share a recipe / Feature request", systemImage: "fork.knife")
+                    Label {
+                        Text("Share a recipe / new feature request")
+                            
+                    } icon: {
+                        Image(systemName: "fork.knife")
+                            .foregroundStyle(.yellow)
+                    }
                 }
                 // .disabled(!MFMailComposeViewController.canSendMail())
                 Image("vladcooks")

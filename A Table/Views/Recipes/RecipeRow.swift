@@ -24,8 +24,10 @@ struct RecipeRow: View {
             Spacer()
             
             if recipe.isFavorite {
-                Image(systemName: "star.fill")
-                    .foregroundColor(.yellow)
+                Image(systemName:"star.circle")
+                    .symbolRenderingMode(.palette)
+                    .foregroundStyle(.yellow)
+                    .imageScale(.large)
             }
         }
     }

@@ -40,7 +40,7 @@ struct ContentView: View {
                 })
             
                 .tabItem {
-                    Image(systemName: "house")
+                    Image(systemName: "fork.knife.circle")
                     Text("Home")
                 }
                 .tag(1)
@@ -76,6 +76,7 @@ struct ContentView: View {
                 }
                 .tag(3)
         }
+        .accentColor(.yellow)
     }
 }
 

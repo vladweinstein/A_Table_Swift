@@ -15,7 +15,7 @@ struct FeatureCard: View {
     // Function not currently in use.
     
     // Must update features.map in CategoryHome line 35
-    // Must build new breakfast/lunch/dinner specific image var in Recipe schema
+    // Must build new breakfast/lunch/dinner specific image var in 'Recipe' file
 
     private func showMealType() -> Bool {
          let hour = Calendar.current.component(.hour, from: Date())

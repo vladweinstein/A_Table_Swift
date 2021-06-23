@@ -15,13 +15,11 @@ struct FavoriteButton: View {
         Button(action: {
                 isSet.toggle()
             }) {
-                Image(systemName: isSet ? "star.fill" : "star")
-                    .foregroundColor(isSet ? Color.white : Color.white)
-                    .foregroundColor(.white)
-                    .padding(.horizontal, 5)
-                    .padding(.vertical, 5)
-                    .background(isSet ? Color.yellow : .gray)
-                    .cornerRadius(10)
+                Image(systemName:"star.circle")
+                    .symbolRenderingMode(.palette)
+                    .foregroundStyle(isSet ? .yellow : .gray)
+                    .imageScale(.large)
+                    .scaleEffect(isSet ? 1.2 : 1.1)
             }
         }
     }

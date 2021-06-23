@@ -100,10 +100,12 @@ struct RecipeDetail: View {
                                         self.showIngredients.toggle()
                                     }
                                 }) {
-                                    Image(systemName: "chevron.right.circle")
+                                    Image(systemName: showIngredients ? "book" : "text.book.closed.fill")
+                                        .symbolRenderingMode(.palette)
+                                        .foregroundStyle(showIngredients ? .gray : .yellow)
                                         .imageScale(.large)
-                                        .rotationEffect(.degrees(showIngredients ? 90 : 0))
-                                        .scaleEffect(showIngredients ? 1.2 : 1)
+                                        .rotationEffect(.degrees(showIngredients ? 20 : 0))
+                                        .scaleEffect(showIngredients ? 1.1 : 1)
                                 }
                             }
                             .padding(.horizontal, 30)
